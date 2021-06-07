@@ -1,0 +1,199 @@
+.section--service {
+  background-color: $color-white;
+  padding: 4rem;
+  @include rwd-df-down(md) {
+    padding: 4rem 3rem;
+  }
+  @include rwd-df-down(sm) {
+    padding: 4rem 2.5rem;
+  }
+  @include rwd-df-down(xs) {
+    padding: 3rem 2rem;
+  }
+  @include rwd-only(xxs) {
+    padding: 2rem 1.5rem;
+  }
+
+  // background-color: $color-white;
+
+  .section--service__header {
+    font-family: $main-font;
+    // color: $color-third-dark-1;
+    color: $color-primary;
+
+    font-size: 3rem;
+    @include rwd-df-down(md) {
+      font-size: 2rem;
+    }
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section--service__text {
+    font-family: inherit;
+    color: $color-secondary;
+    font-size: 1.7rem;
+    @include rwd-df-down(md) {
+      font-size: 1.5rem;
+    }
+    font-weight: 100;
+  }
+
+  // ################################   //
+  &__circle {
+    &__header {
+      font-family: $secondary-font;
+      text-align: $start;
+      font-size: 3.2rem;
+      padding: 2rem;
+      font-weight: 600;
+    }
+
+    &__item {
+      box-shadow: 0 2px 6px rgba($color-third-dark-1, 0.25);
+      font-family: inherit;
+      border-radius: 2rem;
+      text-align: center;
+      color: $color-white;
+      background: linear-gradient(
+        45deg,
+        $color-third-dark-1 0%,
+        $color-fourth 100%
+      );
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      width: 18vw;
+      height: 18vw;
+      margin: 0 3rem 4rem;
+      transition: all 0.7s;
+
+      @include rwd-df-down(md) {
+        width: 28vw;
+        height: 28vw;
+        margin: 0 6vw 4rem;
+      }
+
+      @include rwd-df-down(sm) {
+        width: 60vw;
+        height: 60vw;
+        margin: 0 0 5rem;
+      }
+
+      @include rwd-only(xxs) {
+        width: 70vw;
+        height: 70vw;
+      }
+
+      &__header {
+        width: 100%;
+        max-height: 100%;
+        margin: auto;
+        padding: 1.5rem 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.5s;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-size: 1.9rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          position: relative;
+
+          @include rwd-df-down(lg) {
+            font-size: 1.4rem;
+          }
+          @include rwd-df-down(md) {
+            font-size: 1.8rem;
+          }
+          @include rwd-df-down(sm) {
+            font-size: 2.5rem;
+          }
+          @include rwd-df-down(xs) {
+            font-size: 2rem;
+          }
+
+          &::after {
+            content: '';
+            width: 4rem;
+            height: 2px;
+            position: absolute;
+            background: $color-secondary-light-1;
+            display: block;
+            bottom: -1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+        p {
+          margin-top: 2rem;
+          font-size: 1.2rem;
+          line-height: 1.5;
+
+          @include rwd-df-down(lg) {
+            font-size: 1.1rem;
+          }
+          @include rwd-df-down(md) {
+            font-size: 1.3rem;
+          }
+          @include rwd-df-down(sm) {
+            font-size: 2rem;
+          }
+          @include rwd-df-down(xs) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      &__text {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
+        transform: translateX(-50%);
+        font-size: 1.3rem;
+        line-height: 1.4;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @include rwd-df-down(lg) {
+          font-size: 1rem;
+        }
+        @include rwd-df-down(md) {
+          font-size: 1.2rem;
+        }
+        @include rwd-df-down(sm) {
+          font-size: 1.6rem;
+        }
+        @include rwd-df-down(xs) {
+          font-size: 1.2rem;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:hover &__header {
+        top: -100%;
+      }
+
+      &:hover &__text {
+        top: 0%;
+      }
+    }
+  }
+}
+
+.section--service__circle--grey {
+  background-color: $color-secondary-light-2;
+}

@@ -1,0 +1,50 @@
+.map {
+  text-align: center;
+  font-family: inherit;
+  color: $color-secondary-dark-2;
+  font-weight: normal;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+
+    margin-bottom: 2rem;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+  }
+
+  &:hover &__img {
+    filter: grayscale(0);
+  }
+
+  // &__info{
+
+  // }
+
+  &__header {
+    font-family: $secondary-font;
+    color: $color-primary;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  &__address {
+    font-size: $default-font-size;
+    color: inherit;
+  }
+
+  &__phone {
+    a {
+      font-size: $default-font-size;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

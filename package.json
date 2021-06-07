@@ -1,0 +1,42 @@
+{
+  "name": "dcs-webapp",
+  "version": "1.0.0",
+  "description": "DCS has been formed by a group of professionals having vivid experience and wide exposure in electrification for low & medium voltage solutions",
+  "main": "index.js",
+  "author": "EraaSoft Group",
+  "license": "ISC",
+  "scripts": {
+    "live-server": "live-server",
+    "watch:sass": "node-sass  content/sass/main.scss  content/css/main.css -w",
+    "compile:sass": "node-sass  content/sass/main.scss  content/css/main.css",
+    "test": "npm-run-all --parallel live-server  watch:sass",
+    "gulp-sass": "gulp sassCompile",
+    "gulp-css": "gulp minifyCss",
+    "gulp-js": "gulp minifyJs",
+    "gulp-build": "npm-run-all  gulp-sass  gulp-css  gulp-js",
+    "gulp-watch": "gulp watcher",
+    "gulp": "npm-run-all  gulp-build  gulp-watch",
+    "start": "npm-run-all --parallel live-server gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "autoprefixer": "^10.2.5",
+    "beeper": "^2.1.0",
+    "concat": "^1.0.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "live-server": "^1.2.1",
+    "node-notifier": "^9.0.1",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1"
+  }
+}

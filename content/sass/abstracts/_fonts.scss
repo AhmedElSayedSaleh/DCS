@@ -1,0 +1,18 @@
+/*
+**  Helvetica Neue Font =>   font-family: "Helvetica Neue" , sans-serif;
+*/
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/Helvetica_Neue_font/HelveticaNeue.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Helvetica_Neue_font/HelveticaNeue.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/Helvetica_Neue_font/HelveticaNeue.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../fonts/Helvetica_Neue_font/HelveticaNeue.woff') format('woff'),
+    /* Pretty Modern Browsers */
+      url('../fonts/Helvetica_Neue_font/HelveticaNeue.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+      url('../fonts/Helvetica_Neue_font/HelveticaNeue.svg#svgFontName')
+      format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,564 @@
+/********** defines main layout of all pages *****************/
+
+/* ******************** HOME PAGE *********************/
+
+//========== START MISSION SECTION ==========//
+.section--logo {
+  padding: 2rem 0;
+  display: block;
+  @include rwd-df-down(lg) {
+    padding: 1.5rem 0;
+  }
+  @include rwd-df-down(md) {
+    display: none;
+  }
+  &__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 200px;
+    height: auto;
+  }
+
+  &__title {
+    font-family: $main-font;
+
+    font-size: 2.5rem;
+    @include rwd-df-down(xl) {
+      font-size: 2.25rem;
+    }
+    @include rwd-df-down(lg) {
+      font-size: 2rem;
+    }
+
+    font-weight: 700;
+    color: rgba($color-secondary-dark-2, 0.9);
+    margin-top: 1.5rem;
+    &__char {
+      color: $color-fourth;
+    }
+  }
+}
+//========== END MISSION SECTION ==========//
+
+//========== START MISSION SECTION ==========//
+
+// .mission { padding: 20px 0}
+.mission_card {
+  background-color: $color-fifth;
+  border: 1px solid rgba($color-third-dark-1, 0.5);
+  border-radius: 1rem;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 365px;
+  // margin-bottom: 20px;
+  font-family: $main-font;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 4px #707070;
+    .mission_content {
+      top: 53%;
+    }
+  }
+  @include rwd-df-down(md) {
+    height: 265px;
+  }
+}
+
+.mission_header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: $secondary-font;
+  color: $color-third-dark-1;
+  font-size: 4vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include rwd-df-down(sm) {
+    font-size: 3.5rem;
+  }
+}
+
+.mission_content {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 50%;
+  width: 100%;
+  padding: 10px;
+  padding-top: 20px;
+  text-align: center;
+  color: $color-white;
+  // background-color: $color-primary-1;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 93, 32, 0.6),
+    rgba(255, 93, 32, 1)
+  );
+
+  transition: all 0.3s ease;
+  line-height: 25px;
+  &:last-child {
+    display: flex;
+    justify-content: space-around;
+    ul {
+      text-align: left;
+      padding: 0;
+    }
+  }
+  p {
+    margin: 0;
+    overflow-y: auto;
+  }
+  @media (min-width: 767.98px) and (max-width: 991.9px) {
+    font-size: 1.5vw;
+  }
+}
+
+//========== END MISSION SECTION ==========//
+
+//========== START MARKETS SECTION ==========//
+
+.section--markets {
+  background-color: $color-white;
+  margin-bottom: -1.5rem;
+}
+
+.markets_link {
+  text-decoration: none;
+}
+
+.markets_card {
+  border: 0.15rem solid $color-third-dark-1;
+  padding: 0.15rem;
+  position: relative;
+  background-image: linear-gradient(45deg, #93c9f1, #135d94);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+
+  &:hover {
+    box-shadow: 0 2px 4px #707070;
+
+    .markets-card_img {
+      opacity: 1;
+    }
+
+    .markets-card_header {
+      transform: rotate(360deg);
+    }
+  }
+  @include rwd-df-down(lg) {
+    width: 250px;
+    height: 250px;
+  }
+  @include rwd-df-down(md) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.markets-card_header {
+  text-transform: uppercase;
+  color: $color-white;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 2;
+  transition: transform 0.5s ease-in;
+  @include rwd-df-down(lg) {
+    font-size: 3rem;
+  }
+  @include rwd-df-down(md) {
+    font-size: 2rem;
+  }
+}
+
+//========== END MARKETS SECTION ==========//
+
+//========== START PARTNERS SECTION ==========//
+
+.section--partners {
+  // .partners_owl-carousel {
+  //   // border-top-left-radius: 5rem;
+  //   // border-bottom-left-radius: 5rem;
+  //   margin-top: 4rem;
+  //   border-radius: 10rem;
+  //   border: solid $color-green;
+  //   overflow-x: hidden;
+  // }
+
+  .owl-dots {
+    display: none;
+  }
+}
+
+.partners_content {
+  font-size: 2rem;
+  @include rwd-df-down(lg) {
+    font-size: 1.8rem;
+  }
+  @include rwd-df-down(md) {
+    font-size: 1.6rem;
+  }
+
+  @include rwd-df-down(sm) {
+    font-size: 1.4rem;
+  }
+
+  @include rwd-df-down(xs) {
+    font-size: 1.2rem;
+  }
+
+  width: 80%;
+  @include rwd-df-down(md) {
+    width: 95%;
+  }
+  margin: 0 auto 2rem;
+  display: block;
+  color: $color-secondary-dark-1;
+  text-align: justify;
+}
+
+.partners_card {
+  display: flex;
+  width: 100% !important;
+  height: 150px;
+  margin: 10px auto;
+  background-color: white;
+  border: 1.5px solid $color-fourth;
+  // border-width: 0 1.5px;
+  img {
+    width: 100px !important;
+    margin: auto;
+    display: block;
+  }
+}
+
+//========== END PARTNERS SECTION ==========//
+
+/********************* ABOUT US PAGE ********************/
+
+//=============== START WHO WE ARE SECTION ===============//
+
+.who_content {
+  font-family: inherit;
+  font-family: 500;
+  width: 80%;
+  margin: 0 auto 20px;
+  // text-align: justify;
+  color: $color-secondary-dark-1;
+  // @include rwd-df-down(sm) { text-align: center; }
+}
+
+//=============== END WHO WE ARE SECTION ===============//
+
+//=============== START Why Saudi Bell SECTION ===============//
+.section--why-saudi-bell {
+  &__info {
+    @include rwd-df-down(sm) {
+      padding: 0 1.5rem;
+    }
+    @include rwd-df-down(xxs) {
+      padding: 0 0.7rem;
+    }
+  }
+
+  &__text {
+    color: $color-third-dark-1;
+    font-family: inherit;
+    font-size: 1.7rem;
+    font-weight: normal;
+    word-spacing: 0.3rem;
+    line-height: 2.2rem;
+
+    @include rwd-df-down(sm) {
+      font-size: 1.5rem;
+    }
+    @include rwd-df-down(xxs) {
+      font-size: 1.3rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .dcs-logo {
+    width: 90%;
+    margin: auto;
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+//=============== End Why Saudi Bell SECTION ===============//
+
+//=============== START timeline  SECTION ===============//
+.section--timeline {
+  overflow-x: hidden;
+}
+//=============== End timeline SECTION ===============//
+
+//=============== START Founders Messages SECTION ===============//
+.section--founders {
+  &__text {
+    font-size: $default-font-size;
+    line-height: 1.5;
+    color: $color-secondary;
+    padding: 0 1rem;
+    margin: 2rem 0;
+  }
+
+  &__img-container {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-image: url("../img/founders-messages/Picture3.png");
+    background-size: contain;
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 18%;
+    left: 15%;
+    transform: translate(-50% -50%);
+  }
+}
+//=============== END WHO WE ARE SECTION ===============//
+
+//=============== START SUCCESS STORIES SECTION ===============//
+
+.stories-card_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  // padding: 30px; margin-bottom: 30px;
+  border: 1px solid black;
+  background-color: $color-white;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.stories-card_header {
+  font-family: $secondary-font;
+  color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  min-height: 50px;
+  // margin-bottom: 30px;
+  @include rwd-df-down(lg) {
+    font-size: 1.7rem;
+  }
+}
+
+.stories-card_content {
+  font-family: inherit;
+  margin-bottom: 20px;
+  &:first-of-type {
+    height: 300px;
+    overflow-x: auto;
+    @include rwd-df-down(sm) {
+      height: auto;
+    }
+  }
+  &:not(:first-of-type) {
+    display: none;
+  }
+}
+
+.stories-card_subheader {
+  font-weight: $secondary-font;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: $color-third-dark-1;
+  @include rwd-df-down(lg) {
+    font-size: 1.5rem;
+  }
+}
+
+.stories-card_description {
+  font-family: inherit;
+  text-align: justify;
+  color: $color-third-dark-2;
+  @include rwd-df-down(md) {
+    // text-align: center;
+  }
+}
+
+.stories-card_button {
+  display: block;
+  padding: 5px 20px;
+  margin: auto;
+  color: white;
+  background-color: $color-primary;
+  border: none;
+}
+
+//=============== END SUCCESS STORIES SECTION ===============//
+
+/******************** CLIENTS PAGE ********************/
+
+/*=============== START CLIENTS SECTION ===============*/
+
+.section--clients {
+  text-align: center;
+
+  .clients_img {
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 2rem auto 0;
+    background-color: white;
+    border: 0.1rem solid $color-black;
+
+    @include rwd-only(md) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .clients_name {
+    width: 150px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0 8%;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    @include rwd-only(md) {
+      width: 120px;
+    }
+  }
+}
+/*=============== END CLIENTS SECTION ===============*/
+
+/*=============== START CONTACT SECTION ===============*/
+.section--contact-us {
+  &__text {
+    font-family: inherit;
+    color: $color-secondary;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__email {
+    font-size: 2.2rem;
+    padding: 2rem;
+
+    &__svg,
+    &__icon {
+      color: $color-primary;
+      font-size: 3.5rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      margin-#{$start}: 1rem;
+      color: $color-third-dark-1;
+      transition: all 0.3s;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color-primary;
+      }
+    }
+  }
+
+  .form {
+    &__label {
+      font-size: $default-font-size;
+      @include rwd-df-down(md) {
+        font-size: 1.3rem;
+      }
+      @include rwd-df-down(sm) {
+        font-size: 1.1rem;
+      }
+      @include rwd-df-down(xs) {
+        font-size: 1.3rem;
+        height: auto;
+      }
+    }
+
+    &__submit-btn {
+      font-size: 2.6rem;
+      @include rwd-df-down(md) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+/*=============== END CONTACT SECTION ===============*/
+
+/*=============== START PRODUCT SECTION ===============*/
+.product-section {
+  &__img {
+    img {
+      width: 100%;
+      border-radius: 1rem;
+      padding: 0.3rem;
+      border: 0.2rem solid $color-fourth;
+    }
+  }
+
+  &__content {
+    padding-#{$start}: 5rem;
+
+    @include rwd-df-down(sm) {
+      padding: 4rem 0 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 600;
+      color: $color-third-dark-1;
+      &::first-letter {
+        color: $color-fourth;
+      }
+    }
+    p {
+      color: $color-secondary;
+      padding: 2rem 0;
+    }
+  }
+}
+/*=============== END PRODUCT SECTION ===============*/

@@ -1,0 +1,235 @@
+/*
+**  define styling for form element components with specified with classe form.
+*/
+.form {
+  font-family: $main-font;
+
+  &__group {
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    margin: 0;
+    padding: 0.375rem 0.75rem;
+    font-family: $secondary-font;
+    font-weight: 600;
+    font-size: $default-font-size;
+    width: 100%;
+    height: 3.85rem;
+    color: $color-white;
+    background-color: $color-secondary-dark-2;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+  &__input {
+    text-align: #{$start};
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+
+    border-radius: 0;
+    color: $color-third-dark-1;
+    border: 0.2rem solid $color-secondary-dark-2;
+    padding: 0.375rem 0.75rem;
+
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: normal;
+    background-color: unset;
+
+    &::-webkit-input-placeholder {
+      color: rgba($color-secondary, 0.6);
+    }
+
+    &:focus {
+      outline: none;
+      color: $color-third-dark-1;
+      background-color: unset;
+      box-shadow: 0 0 0 0.25rem $color-fourth;
+      border-color: $color-fourth;
+    }
+
+    &:focus:invalid {
+      box-shadow: 0 0 0 0.25rem rgba(red, 0.8);
+      border-color: rgba(red, 0.8);
+    }
+
+    &.error {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 19rem;
+  }
+
+  label.error {
+    font-family: inherit;
+    color: rgba(tomato, 0.9);
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: inline-block;
+    padding-left: 1rem;
+    margin-top: 0.7rem;
+    display: block;
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__submit-btn {
+    font-size: 2.6rem;
+    padding: 0.5rem 0rem;
+
+    position: relative;
+    display: block;
+    width: 100%;
+
+    color: #fff;
+    background-color: $color-secondary-dark-2;
+    text-transform: uppercase;
+
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1rem $color-secondary-dark-2;
+      text-decoration: underline;
+      // box-shadow: 0  1rem  2rem rgba($color-black,.2);
+    }
+
+    &:hover::before {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+      z-index: 5;
+    }
+
+    &:focus  /* to change default for button*/ {
+      outline: none; /* to change default for button*/
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      z-index: -1;
+      transition: all 4s;
+    }
+  }
+}
+
+.form__selectbox {
+  &__svg,
+  &__icon {
+    color: $color-secondary-dark-2;
+    position: absolute;
+    top: -1rem;
+    #{$end}: 1rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    line-height: 4rem;
+    font-size: 5rem;
+  }
+
+  &__dropdown {
+    width: 100%;
+    height: 3.85rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: transparent;
+      border: none;
+    }
+  }
+
+  .dropdown-menu {
+    font-family: inherit;
+    border-radius: 0 !important;
+    text-align: center;
+    border: 2px solid $color-secondary-dark-2;
+    border-top: 0;
+
+    min-width: 300px;
+    #{$start}: 0;
+    @include rwd-df-down(xs) {
+      width: 100%;
+    }
+
+    font-size: 1rem;
+    color: #212529;
+    background-color: $color-white;
+
+    .dropdown-item {
+      font-family: inherit;
+      font-size: $default-font-size;
+      display: block;
+      width: 100%;
+      padding: 0.25rem 1rem;
+      font-weight: 400;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      text-transform: uppercase;
+      color: $color-secondary;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-secondary-dark-2;
+        color: $color-white;
+      }
+    }
+  }
+
+  .dropdown-item:hover .form__selectbox_item_svg,
+  .dropdown-item:hover .form__selectbox_item_icon {
+    opacity: 1;
+  }
+}
+
+.form__selectbox_item_svg,
+.form__selectbox_item_icon {
+  position: absolute;
+  color: $color-white;
+  right: 0;
+  top: 0;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 35px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form__selectbox_item_icon {
+  font-size: 3.5rem;
+}

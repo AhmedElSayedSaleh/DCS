@@ -1,0 +1,37 @@
+/*
+**  direction setting variables 
+*/
+$start: left;
+$end: right;
+
+/*
+**  font family setting variables 
+*/
+$main-font: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+$secondary-font: 'Source Sans Pro', sans-serif;
+
+/*******************************  import All used scss files   ******************************/
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/rwd';
+@import 'abstracts/fonts';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/link-btn';
+@import 'components/preloader';
+@import 'components/service-circle';
+@import 'components/scroll-top-btn';
+@import 'components/timeline';
+@import 'components/map';
+@import 'components/form';
+@import 'components/solution-filpcard';
+
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/footer';
+
+@import 'pages/main';

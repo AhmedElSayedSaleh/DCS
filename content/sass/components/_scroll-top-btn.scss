@@ -1,0 +1,33 @@
+.scroll-top-btn {
+  display: inline-block;
+  border-radius: 100%;
+  overflow: hidden;
+
+  position: fixed;
+  #{$end}: 15px;
+  bottom: 40px;
+
+  color: $color-primary;
+  background-color: $color-white;
+  opacity: 1;
+  cursor: pointer;
+  display: none;
+
+  font-size: 4rem;
+  @include rwd-df-down(xs) {
+    font-size: 3.5rem;
+    #{$end}: 15px;
+    bottom: 18px;
+  }
+
+  font-weight: normal;
+
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+  }
+}

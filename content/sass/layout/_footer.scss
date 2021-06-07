@@ -1,0 +1,269 @@
+/*
+**  define styling for element components with specified with classe footer.
+*/
+.footer {
+  background-image: linear-gradient(to right, #93c9f1, #135d94);
+  color: $color-white;
+  font-size: $default-font-size;
+
+  padding-top: 5rem;
+  @include rwd-df-down(lg) {
+    padding-top: 4rem;
+  }
+  @include rwd-df-down(md) {
+    padding-top: 3rem;
+  }
+  @include rwd-df-down(sm) {
+    padding-top: 2.5rem;
+  }
+  @include rwd-df-down(xs) {
+    padding-top: 2rem;
+  }
+
+  .main-footer {
+    &__item {
+    }
+
+    &__item--logos {
+      @include rwd-only(xs) {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+
+    &__logo-link {
+      display: block;
+      width: 80%;
+      @include rwd-df-down(md) {
+        width: 60%;
+      }
+
+      @include rwd-df-down(xs) {
+        width: 80%;
+      }
+      margin: 0 auto;
+
+      &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__contact__logos {
+      img {
+        width: calc(90% / 5);
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__item--certficate {
+      .col-6 {
+        @include rwd-only(xxs) {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+
+    &__list {
+      &__item {
+        text-align: left;
+      }
+
+      &__heading {
+        text-align: left;
+        font-family: $secondary-font;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
+      }
+
+      &__link {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @include rwd-only(xs) {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+
+    &__partner-link {
+      display: block;
+      width: 100%;
+    }
+
+    &__partner-img {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      height: auto;
+      @include rwd-only(xs) {
+        width: 50%;
+      }
+    }
+
+    .form {
+      font-family: inherit;
+      &__title {
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
+      }
+
+      &__text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: inherit;
+        line-height: 26px;
+        margin-bottom: 15px;
+      }
+
+      &__email {
+        display: inline-block;
+        width: 100%;
+        border-radius: 0.3rem;
+        border: 1px solid #ddd;
+        height: 36px;
+        padding: 5px 12px;
+        outline: medium none;
+        color: $color-black;
+
+        @include rwd-df-down(lg) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
+      &__btn {
+        font-family: inherit;
+        border-radius: 0;
+        background-color: $color-secondary-dark-2;
+        color: $color-white;
+        border-radius: 0.4rem;
+        border: none;
+        display: inline-block;
+        padding: 6px 30px;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        opacity: 1;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .sub-footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    // background-color: $color-white;
+    color: white;
+    background-color: $color-secondary-dark-2;
+
+    &__social-list {
+      &__item {
+        &:not(:last-child) {
+          margin-#{$end}: 1rem;
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.4rem;
+        @include rwd-df-down(xs) {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 0.3rem;
+        }
+        // background-color: $color-third-4;
+        // background-color: $color-secondary-1;
+
+        border: 0.1rem solid $color-white;
+        background-color: $color-secondary-dark-2;
+        cursor: pointer;
+
+        transition: all 0.3s ease-in;
+        i {
+          font-size: $default-font-size;
+          @include rwd-df-down(xs) {
+            font-size: 1.2rem;
+          }
+
+          color: $color-white;
+          transition: all 0.3s ease-in;
+        }
+
+        &:hover {
+          border: 0.1rem solid $color-secondary-dark-2;
+          background-color: $color-white;
+
+          i {
+            color: $color-fourth;
+          }
+        }
+      }
+
+      &__icon {
+        // color: $color-secondary-1;
+        color: $color-white;
+        transition: 0.5s transform;
+      }
+    }
+
+    &__copyright {
+      font-family: inherit;
+      &__sentences {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: inherit;
+        margin-bottom: 0;
+
+        font-size: 1.3rem;
+        @include rwd-df-down(xs) {
+          font-size: 1rem;
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+        font-weight: 700;
+        color: inherit;
+
+        transition: color 0.2s;
+        &:hover {
+          color: $color-fourth;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
