@@ -10,11 +10,11 @@ const links = navList.querySelectorAll(".navigation__link");
 const toggleBtn = window.document.querySelector(".navigation__toggle-btn");
 const scrollTopBtn = window.document.querySelector(".scroll-top-btn");
 
-document
-  .querySelector(".navigation__link--dl")
-  .addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
+// document
+//   .querySelector(".navigation__link--dl")
+//   .addEventListener("click", (e) => {
+//     e.stopPropagation();
+//   });
 
 // #region Loader
 window.addEventListener("load", (event) => {
