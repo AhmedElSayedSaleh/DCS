@@ -2,7 +2,7 @@
 **  define styling for element components with specified with classe footer.
 */
 .footer {
-  background-image: linear-gradient(to right, #93c9f1, #135d94);
+  background-image: linear-gradient(to right, $color-third-dark-1, #0091ad);
   color: $color-white;
   font-size: $default-font-size;
 

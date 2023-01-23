@@ -6,7 +6,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #ff5d20;
+  background-color: $color-primary;
   z-index: 9999999;
   transition: opacity 0.5s ease-in;
 
@@ -25,25 +25,25 @@
     animation: animate 4s infinite forwards ease-in-out;
 
     &:nth-child(1) {
-      background: #43403e;
+      background: $color-secondary-dark-2;
       left: -44px;
       top: -44px;
       animation-delay: 0.5s;
     }
     &:nth-child(2) {
-      background: #1ca27a;
+      background: $color-fourth;
       left: 0px;
       top: -44px;
       animation-delay: 1s;
     }
     &:nth-child(3) {
-      background: #43403e;
+      background: $color-secondary-dark-2;
       left: 0px;
       top: 0px;
       animation-delay: 2s;
     }
     &:nth-child(4) {
-      background: #1ca27a;
+      background: $color-fourth;
       left: -44px;
       top: 0px;
       animation-delay: 1.5s;

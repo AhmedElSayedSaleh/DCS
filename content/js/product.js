@@ -9,7 +9,7 @@ const productsArr = [
   },
   {
     id: 02,
-    name: "DCS Local SwitchBoard",
+    name: "CONSYS Local SwitchBoard",
     description:
       "In our field, we can add our expert in local switchboard, Transformers MDBs, Pillars and cofrees for low voltage side as electrical holding company specs",
     img: "../content/img/products/IMG_8478-1024x683.jpg",
@@ -37,7 +37,7 @@ const productsArr = [
   },
   {
     id: 06,
-    name: "DCS Local SwitchBoard",
+    name: "CONSYS Local SwitchBoard",
     description:
       "In our field, we can add our expert in local switchboard, Transformers MDBs, Pillars and cofrees for low voltage side as electrical holding company specs",
     img: "../content/img/products/IMG_8478-1024x683.jpg",
@@ -65,7 +65,7 @@ const productsArr = [
   },
   {
     id: 10,
-    name: "DCS Local SwitchBoard",
+    name: "CONSYS Local SwitchBoard",
     description:
       "In our field, we can add our expert in local switchboard, Transformers MDBs, Pillars and cofrees for low voltage side as electrical holding company specs",
     img: "../content/img/products/IMG_8478-1024x683.jpg",

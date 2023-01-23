@@ -100,8 +100,8 @@
   // background-color: $color-primary-1;
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 93, 32, 0.6),
-    rgba(255, 93, 32, 1)
+    rgba(223, 81, 85, 0.6),
+    rgba(223, 81, 85, 1)
   );
 
   transition: all 0.3s ease;
@@ -140,7 +140,7 @@
   border: 0.15rem solid $color-third-dark-1;
   padding: 0.15rem;
   position: relative;
-  background-image: linear-gradient(45deg, #93c9f1, #135d94);
+  background-image: linear-gradient(45deg, $color-third-dark-1, #7c98b3);
   background-size: cover;
   background-clip: content-box;
   background-position: center;
